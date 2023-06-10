@@ -32,7 +32,7 @@ function updateGameArea() {
   // loop through chords
   const time = chords[index][0].ticks;
   const ctx = myGameArea.context;
-  ctx.fillStyle = "red";
+  ctx.fillStyle = "blue";
 
   // starts by drawing the current chord (index i)
   // then continues to draw chords (as tick-marks on the page)
@@ -47,6 +47,10 @@ function updateGameArea() {
     // increment i
     i++;
   }
+
+  // draw pointer
+  ctx.fillStyle = "red";
+  ctx.fillRect(0, 0, noteWidth, myGameArea.canvas.height);
 }
 
 startGame();
